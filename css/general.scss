@@ -1,0 +1,141 @@
+body {
+	position: relative;
+	overflow-x: hidden;
+	background-color: rgba(252,253,221,0.2);
+	width: 100%;
+}
+
+p {
+	font-size: 16px;
+	/* font-family: 'CambriaMath'; */
+}
+
+p.small {
+	font-size: 16px;
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+	font-family: 'CambriaMath';
+	font-size : 15px;
+	font-weight: bolder;
+}
+ul {
+	list-style-type: none;
+	text-align: left;
+}
+
+.fa-li {
+	position: relative;
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-transform: uppercase;
+	font-family: 'CambriaMath';
+	/* background-color: #404E69; */
+	/* margin: 0 -9999rem; *//* add back negative margin value */
+	/* padding: 70px 9999rem; */
+	/* color: white; */
+}
+h1 {
+	text-transform: uppercase;
+	font-family: 'CambriaMath';
+	/* background-color: #404E69; */
+	margin: 20px -9999rem;
+	padding: 15px 9999rem;
+	/* color: rgb(64, 78, 105); */
+	margin-bottom: 0px;
+	text-align: center;
+}
+
+h3 {
+	    text-align: center;
+	    font-size: 25px;
+	    font-family: 'Cambria-Italic';
+	    text-shadow: -1px -1px 0 rgba(64, 78, 105, 0.2);
+	    /* background-color: #cbf2bc; */
+}
+
+h4 {
+	 font-size: 30px;
+	    font-family: 'Cambria-Italic';
+	    text-shadow: -1px -1px 0 rgba(64, 78, 105, 0.2);
+}
+
+h5 {
+
+ font-size: 30px;
+	    font-family: 'CambriaMath';
+	    text-shadow: -1px -1px 0 rgba(64, 78, 105, 0.2);
+}
+
+hr.star-light,
+hr.star-primary {
+	margin: 25px auto 30px;
+	padding: 0;
+	max-width: 250px;
+	border: 0;
+	border-top: solid 5px;
+	text-align: center;
+}
+
+hr.star-light:after,
+hr.star-primary:after {
+	content: "\f005";
+	display: inline-block;
+	position: relative;
+	top: -.8em;
+	padding: 0 .25em;
+	font-family: FontAwesome;
+	font-size: 2em;
+}
+
+hr.star-light {
+	border-color: #fff;
+}
+
+hr.star-light:after {
+	color: #fff;
+	background-color: #CBF2BC;
+}
+
+hr.star-primary {
+	border-color: #2c3e50;
+}
+
+hr.star-primary:after {
+	color: #2c3e50;
+	background-color: #fff;
+}
+
+.img-centered {
+	margin: 0 auto;
+}
+
+
+/*legales*/
+header .logo {
+	width: 100%;
+	background-color: #404E69;
+	padding: 25px;
+	margin-bottom: 25px;
+	img {
+		margin: 0 auto;
+		width: 150px;
+	}
+	h1 {color: white; padding-bottom: 0;}
+}
+ #legales .container {
+ 	margin-bottom: 50px;
+ 	p {padding: 0 20px;}
+ }
+

@@ -1,0 +1,435 @@
+/*VARIABLES*/
+iframe {
+  width: 85%;
+  max-width: 1000px;
+  min-width: 250px; }
+
+.datepicker {
+  width: auto; }
+
+#inscripcion .titulo {
+  color: #2c3e50; }
+  #inscripcion .titulo h1 {
+    margin: 20px auto; }
+#inscripcion .datos {
+  padding: 50px;
+  /*------ form ------*/ }
+  #inscripcion .datos form > div {
+    background: #fefef8;
+    border: 3px solid #2c3e50;
+    width: 60%;
+    min-width: 550px;
+    display: none;
+    opacity: 0;
+    height: 400px;
+    margin-left: 20%;
+    padding: 20px;
+    text-align: center; }
+    #inscripcion .datos form > div h3 {
+      position: relative;
+      top: -20px;
+      margin-bottom: 0px;
+      font-size: 3.5rem;
+      font-family: CambriaMath; }
+    @media (max-width: 1200px) {
+      #inscripcion .datos form > div {
+        margin: 0 auto;
+        float: none; } }
+    @media (max-width: 769px) {
+      #inscripcion .datos form > div {
+        height: auto;
+        width: 95%;
+        min-width: 260px;
+        margin-left: 2.5%; }
+        #inscripcion .datos form > div h3 {
+          font-size: 3rem; }
+        #inscripcion .datos form > div label {
+          width: 100%; }
+        #inscripcion .datos form > div .personales h3, #inscripcion .datos form > div .resumen h3 {
+          top: -115px; } }
+  #inscripcion .datos .paso_activo {
+    display: block !important;
+    opacity: 1;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+    #inscripcion .datos .paso_activo .icon {
+      color: white !important; }
+  #inscripcion .datos label {
+    margin-bottom: 25px;
+    text-align: center; }
+    #inscripcion .datos label p {
+      position: relative;
+      opacity: 0;
+      top: 46px;
+      transition: all .5s ease; }
+  #inscripcion .datos input, #inscripcion .datos select {
+    padding: 1.1rem;
+    border-radius: 2px;
+    width: 75%;
+    border: none;
+    text-align: center;
+    font-size: 1.1em;
+    border: 0.2px solid #404E69;
+    background-color: rgba(64, 78, 105, 0.2); }
+    @media (max-width: 769px) {
+      #inscripcion .datos input, #inscripcion .datos select {
+        width: 90%; } }
+  #inscripcion .datos ::-webkit-input-placeholder {
+    color: #2c3e50;
+    opacity: .6; }
+  #inscripcion .datos ::-moz-placeholder {
+    color: #2c3e50;
+    opacity: .6; }
+  #inscripcion .datos :-ms-input-placeholder {
+    color: #2c3e50;
+    opacity: .6; }
+  #inscripcion .datos :-moz-placeholder {
+    color: #2c3e50;
+    opacity: .6; }
+  #inscripcion .datos select {
+    width: 85%;
+    display: block;
+    margin: 35px auto 40px;
+    padding: 0;
+    height: 4rem;
+    font-size: 1.1em;
+    text-align: center;
+    background-color: #ffffff; }
+  #inscripcion .datos button {
+    background-color: white;
+    border-radius: 1.2em;
+    color: #2c3e50;
+    padding: 0.5em;
+    border: none;
+    position: absolute;
+    left: 40%;
+    bottom: 20px; }
+    @media (max-width: 769px) {
+      #inscripcion .datos button {
+        left: calc(50% - 60px); } }
+  #inscripcion .datos .datos_avance {
+    margin-top: 0px;
+    pointer-events: none; }
+    #inscripcion .datos .datos_avance ul {
+      text-align: center;
+      margin: 0 auto;
+      float: none;
+      width: 60%;
+      min-width: 550px;
+      padding: 0; }
+      #inscripcion .datos .datos_avance ul .paso_activo {
+        background-color: #2c3e50 !important; }
+      #inscripcion .datos .datos_avance ul li {
+        display: -moz-inline-stack !important;
+        display: inline-block !important;
+        font-size: 6rem;
+        width: 20%;
+        margin: -3px 0 0;
+        float: left;
+        border: 3px solid #2c3e50;
+        border-right: 0px; }
+      #inscripcion .datos .datos_avance ul > :last-child {
+        border-right: 3px solid #2c3e50; }
+      #inscripcion .datos .datos_avance ul .icon {
+        position: relative;
+        top: 0;
+        -webkit-transition: top 0.5s ease;
+        -moz-transition: top 0.5s ease;
+        -ms-transition: top 0.5s ease;
+        -o-transition: top 0.5s ease;
+        transition: top 0.5s ease; }
+      #inscripcion .datos .datos_avance ul .paso_5 {
+        background: none;
+        padding: 0; }
+    @media (max-width: 769px) {
+      #inscripcion .datos .datos_avance {
+        width: 100%;
+        min-width: 260px;
+        margin: 0 auto; }
+        #inscripcion .datos .datos_avance ul {
+          width: 99%;
+          min-width: 260px; } }
+    @media (max-width: 480px) {
+      #inscripcion .datos .datos_avance ul li {
+        height: 85px; }
+      #inscripcion .datos .datos_avance .icon {
+        font-size: 4.5rem;
+        top: -5px !important; } }
+  #inscripcion .datos ul .rellenar_puntos {
+    background-color: #2c3e50 !important; }
+    #inscripcion .datos ul .rellenar_puntos .icon {
+      color: white; }
+  #inscripcion .datos .elegir input {
+    display: inline-block;
+    margin-top: 15px; }
+  #inscripcion .datos .elegir label {
+    margin-bottom: 15px; }
+  #inscripcion .datos .elegir .tiempo_curso {
+    position: relative; }
+    #inscripcion .datos .elegir .tiempo_curso .botones {
+      float: left;
+      position: relative;
+      left: 7%;
+      top: 16px;
+      font-size: 1.1em; }
+    #inscripcion .datos .elegir .tiempo_curso input {
+      float: left;
+      position: relative;
+      left: 12.5%; }
+      #inscripcion .datos .elegir .tiempo_curso input::-webkit-inner-spin-button {
+        display: none; }
+  #inscripcion .datos .resumen, #inscripcion .datos .success {
+    background-color: #CBF2BC;
+    padding: 30px 50px; }
+    #inscripcion .datos .resumen p, #inscripcion .datos .success p {
+      font-size: 1.2em;
+      line-height: 1.7em; }
+    #inscripcion .datos .resumen p:last-child, #inscripcion .datos .success p:last-child {
+      margin-top: 1.5em;
+      font-size: 1em; }
+    #inscripcion .datos .resumen label, #inscripcion .datos .success label {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      left: 0;
+      margin-bottom: 0; }
+      #inscripcion .datos .resumen label #check_terminos, #inscripcion .datos .success label #check_terminos {
+        width: auto;
+        margin-right: 10px; }
+    #inscripcion .datos .resumen #customButton, #inscripcion .datos .success #customButton {
+      opacity: .5;
+      margin: 0 auto;
+      cursor: default;
+      padding: 9px 1.5em;
+      bottom: 50px;
+      font-size: 1.2em;
+      -webkit-box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.2); }
+  @media (max-width: 769px) {
+    #inscripcion .datos .elegir input {
+      min-width: 160px;
+      float: right;
+      margin: -10px 0 20px; }
+    #inscripcion .datos .elegir .col-sm-6 {
+      float: none;
+      padding-top: 10px; }
+      #inscripcion .datos .elegir .col-sm-6 input {
+        float: none;
+        width: 85%;
+        margin: 10px 0; }
+    #inscripcion .datos .elegir select {
+      margin-top: 0;
+      margin-bottom: 15px;
+      width: 80%; }
+    #inscripcion .datos .elegir .tiempo_curso input {
+      left: 0;
+      margin-bottom: 60px; }
+    #inscripcion .datos .elegir .tiempo_curso .botones {
+      float: none;
+      position: static; }
+      #inscripcion .datos .elegir .tiempo_curso .botones div {
+        position: absolute;
+        bottom: 67px;
+        font-size: 1.5em; }
+      #inscripcion .datos .elegir .tiempo_curso .botones .mas {
+        right: 13%; }
+      #inscripcion .datos .elegir .tiempo_curso .botones .menos {
+        left: 13%; }
+    #inscripcion .datos .personales #nacionalidad, #inscripcion .datos .contacto #telf, #inscripcion .datos .otros_datos #nivel {
+      margin-bottom: 50px; }
+    #inscripcion .datos .resumen {
+      padding: 20px;
+      padding-bottom: 115px; } }
+  @media (max-width: 620px) {
+    #inscripcion .datos h3 {
+      font-size: 2.5rem !important; } }
+  @media (max-width: 420px) {
+    #inscripcion .datos .elegir select {
+      width: 90%; }
+    #inscripcion .datos .elegir .col-sm-6 input {
+      width: 95%; }
+    #inscripcion .datos .resumen #customButton {
+      bottom: 60px; } }
+  #inscripcion .datos .habilitado {
+    opacity: 1 !important;
+    border: 0.2px solid #404E69;
+    cursor: pointer !important; }
+#inscripcion .siguiente {
+  opacity: .5;
+  cursor: default;
+  width: 20%;
+  min-width: 120px;
+  margin: 25px auto 10px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+#inscripcion .validado {
+  background-color: rgba(203, 242, 188, 0.7) !important; }
+#inscripcion .no_validado {
+  border: 1px solid red !important;
+  color: red !important; }
+#inscripcion .desglose {
+  display: none; }
+
+#contacto h1 {
+  margin: 0; }
+#contacto label {
+  text-align: center;
+  width: 100%; }
+  #contacto label p {
+    position: relative;
+    opacity: 0;
+    top: 46px;
+    transition: all .5s ease; }
+#contacto input, #contacto textarea {
+  padding: 1.1rem;
+  border-radius: 2px;
+  width: 75%;
+  border: none;
+  text-align: center;
+  font-size: 1.1em;
+  border: 0.2px solid #404E69;
+  background-color: rgba(64, 78, 105, 0.2); }
+  @media (max-width: 769px) {
+    #contacto input, #contacto textarea {
+      width: 90%; } }
+#contacto textarea {
+  text-align: left;
+  width: 75%; }
+#contacto ::-webkit-input-placeholder {
+  color: #2c3e50;
+  opacity: .6; }
+#contacto ::-moz-placeholder {
+  color: #2c3e50;
+  opacity: .6; }
+#contacto :-ms-input-placeholder {
+  color: #2c3e50;
+  opacity: .6; }
+#contacto :-moz-placeholder {
+  color: #2c3e50;
+  opacity: .6; }
+#contacto .siguiente {
+  opacity: 1;
+  width: 20%;
+  min-width: 120px;
+  margin: 25px auto 10px;
+  display: block;
+  border: 0.2px solid #404E69;
+  cursor: pointer; }
+#contacto .contacto_enviado {
+  display: none;
+  text-align: center; }
+
+#bs-example-navbar-collapse-1 .contacto {
+  position: relative;
+  left: 100px; }
+  #bs-example-navbar-collapse-1 .contacto > a {
+    width: 6.4em;
+    border-radius: 10px;
+    padding-top: 9px;
+    margin-top: 13px;
+    -webkit-transition: 0.1s ease-out 2s;
+    -moz-transition: 0.1s ease-out 2s;
+    -ms-transition: 0.1s ease-out 2s;
+    -o-transition: 0.1s ease-out 2s;
+    transition: 0.1s ease-out 2s; }
+  #bs-example-navbar-collapse-1 .contacto ul {
+    visibility: hidden;
+    opacity: 0;
+    margin-top: -115px;
+    position: relative;
+    top: 0;
+    border-radius: 10px;
+    padding: 15px;
+    top: 30px;
+    margin-right: -100px;
+    color: #2c3e50;
+    background-color: #CBF2BC;
+    -webkit-transition: 0.1s ease-out 2s;
+    -moz-transition: 0.1s ease-out 2s;
+    -ms-transition: 0.1s ease-out 2s;
+    -o-transition: 0.1s ease-out 2s;
+    transition: 0.1s ease-out 2s; }
+    #bs-example-navbar-collapse-1 .contacto ul span {
+      font-size: 1.5em;
+      margin-right: 10px;
+      position: relative;
+      top: 4px; }
+  #bs-example-navbar-collapse-1 .contacto:hover > a {
+    color: #2c3e50;
+    background-color: #CBF2BC;
+    -webkit-transition: 0.15s ease 0s;
+    -moz-transition: 0.15s ease 0s;
+    -ms-transition: 0.15s ease 0s;
+    -o-transition: 0.15s ease 0s;
+    transition: 0.15s ease 0s; }
+  #bs-example-navbar-collapse-1 .contacto:hover ul {
+    visibility: visible;
+    opacity: 1;
+    top: 100px;
+    -webkit-transition: 0.15s ease 0s;
+    -moz-transition: 0.15s ease 0s;
+    -ms-transition: 0.15s ease 0s;
+    -o-transition: 0.15s ease 0s;
+    transition: 0.15s ease 0s; }
+  @media (max-width: 1024px) {
+    #bs-example-navbar-collapse-1 .contacto {
+      left: 5%; }
+      #bs-example-navbar-collapse-1 .contacto ul {
+        right: 50%;
+        top: 70px; } }
+  @media (max-width: 768px) {
+    #bs-example-navbar-collapse-1 .contacto {
+      left: 0; }
+      #bs-example-navbar-collapse-1 .contacto ul {
+        right: 0;
+        top: 54px;
+        padding-top: 5px;
+        height: 130px; }
+      #bs-example-navbar-collapse-1 .contacto:hover ul {
+        height: 143px;
+        top: 56px;
+        margin-top: -70px !important; } }
+
+.cookies {
+  position: fixed;
+  width: 100%;
+  padding: 30px;
+  font-size: 1.2em;
+  text-align: center;
+  height: 80px;
+  bottom: 0;
+  background-color: #404E69;
+  color: white;
+  z-index: 200; }
+  .cookies span {
+    text-decoration: underline;
+    cursor: pointer; }
+  .cookies a {
+    text-decoration: underline;
+    color: inherit;
+    font-family: inherit;
+    font-weight: inherit; }
+
+#Faqs {
+  background-color: #404E69; }
+  #Faqs .titulo {
+    color: white;
+    background-color: #404E69;
+    padding-bottom: 10px;
+    margin-bottom: 20px; }
+  #Faqs .panel-heading {
+    background-color: white; }
+    #Faqs .panel-heading h4 {
+      text-shadow: none !important; }
+  #Faqs h5 {
+    color: white;
+    text-shadow: none; }
+
+/*# sourceMappingURL=carrito.css.map */

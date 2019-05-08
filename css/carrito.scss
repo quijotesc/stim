@@ -1,0 +1,528 @@
+/*VARIABLES*/
+
+$color-primario: #2c3e50;
+$color-fondo-primario: #404E69;
+$color-secundario: #CBF2BC;
+$color-fondo-secundario: rgb(254, 254, 248);
+
+@mixin border-radius($radius){
+	-webkit-border-radius:$radius;
+	   -moz-border-radius:$radius;
+		-ms-border-radius:$radius;
+		 -o-border-radius:$radius;
+			border-radius:$radius;
+}
+
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	$opacity-ie: $opacity * 100;
+	filter: alpha(opacity=$opacity-ie); 
+}
+
+@mixin box-shadow($top, $left, $blur, $color) {
+ -webkit-box-shadow:$top $left $blur $color;
+    -moz-box-shadow:$top $left $blur $color;
+         box-shadow:$top $left $blur $color;
+} 
+
+@mixin calc($key, $value) {
+  #{$key}: -webkit-calc(#{$value});
+     #{$key}: -moz-calc(#{$value});
+          #{$key}: calc(#{$value});
+}            
+
+@mixin transition($transition) {
+ -webkit-transition: #{$transition};
+    -moz-transition: #{$transition};
+     -ms-transition: #{$transition};
+      -o-transition: #{$transition};
+         transition: #{$transition};
+}
+
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+          transform: $transforms;
+}
+
+@mixin rotate ($deg) { @include transform(rotate(#{$deg}deg));} 
+
+@mixin scale($scale) { @include transform(scale($scale));}
+
+
+iframe {
+	width: 85%;
+	max-width: 1000px;
+	min-width: 250px;
+}
+
+.datepicker {width: auto}
+
+
+#inscripcion {
+	.titulo {
+		color: $color-primario;
+		h1 {margin: 20px auto;}
+	}
+	
+	.datos {
+		// background-color: white;
+		padding: 50px;
+		
+		form>div {
+			background: $color-fondo-secundario;
+			border: 3px solid $color-primario;
+			width: 60%;
+			min-width: 550px;
+			display: none;
+			opacity: 0;
+			height: 400px;
+			margin-left: 20%;
+			padding: 20px;
+			text-align: center;
+			//border-radius: 5px;
+			//@include box-shadow (0px, 20px, 70px, rgba(0,0,0,.2));
+			//@include transition (all 1s ease);
+
+			h3 {
+				position: relative;
+			    top: -20px;
+			    margin-bottom: 0px;
+    			font-size: 3.5rem;
+    			font-family: CambriaMath;
+			}
+			@media(max-width: 1200px) {
+				margin: 0 auto;
+				// height: 460px;
+				float: none;
+				
+			}
+			@media(max-width: 769px) {
+				height: auto;
+				width: 95%;
+				min-width: 260px;
+				margin-left: 2.5%;
+				h3 {font-size: 3rem;}
+				label {width: 100%;}
+				.personales h3, .resumen h3 {top:-115px;}
+			}
+		}
+		.paso_activo {
+			display: block!important;
+			opacity: 1;
+			@include transition (all .5s ease);
+			.icon {
+				//top: -20px!important;
+				color: white!important;
+			}
+			
+		}
+
+		label {
+			margin-bottom: 25px;
+			text-align: center;
+			p {
+		    	position: relative;
+		    	opacity: 0;
+				top: 46px;
+				transition: all .5s ease;
+			}
+		}
+		input, select {
+			padding: 1.1rem;
+			border-radius: 2px;
+			width: 75%;
+			border: none;
+			text-align: center;
+			font-size: 1.1em;
+			border: .2px solid $color-fondo-primario;
+			background-color: rgba($color-fondo-primario,.2);
+			@media (max-width: 769px) {
+				width: 90%;
+			}
+		}
+
+		::-webkit-input-placeholder { color: $color-primario; opacity: .6; }
+		::-moz-placeholder { color: $color-primario; opacity: .6; }
+		:-ms-input-placeholder { color: $color-primario; opacity: .6; }
+		:-moz-placeholder { color: $color-primario; opacity: .6; }
+
+		select {
+			width: 85%;
+			display: block;
+			margin: 35px auto 40px;
+			padding: 0;
+			height: 4rem;
+			font-size: 1.1em;
+			text-align: center;
+		    background-color: #ffffff;
+		}
+		button {
+			background-color: white;
+			border-radius: 1.2em;
+			color: $color-primario;
+			padding: 0.5em;
+			border: none;
+			position: absolute;
+			left: 40%;
+			bottom: 20px;
+			@media (max-width: 769px) {
+				left: calc(50% - 60px);
+			}
+		}
+
+		.datos_avance {
+			margin-top: 0px;
+			pointer-events: none;
+			ul {
+				text-align: center;
+				margin: 0 auto;
+				float: none;
+				width: 60%;
+				min-width: 550px;
+				padding: 0;
+
+				.paso_activo { background-color: $color-primario!important; }
+
+				li {
+					display: -moz-inline-stack!important;
+        			display: inline-block!important;
+					font-size: 6rem; 
+					width: 20%;
+					margin: -3px 0 0;
+					float: left;
+					border: 3px solid $color-primario;
+					border-right: 0px;
+				}
+				& > :last-child {
+					border-right: 3px solid $color-primario;
+				}
+				.icon {
+					position: relative; 
+					top: 0; 
+					@include transition(top .5s ease);
+				}
+				.paso_5 {background: none; padding: 0}
+			}
+			@media(max-width: 769px) {
+				width: 100%;
+				min-width: 260px;
+				margin: 0 auto;
+				ul {width: 99%; min-width: 260px;}
+			}
+
+
+			@media (max-width: 480px) {
+				ul li { height: 85px; }
+				.icon {font-size: 4.5rem; top: -5px!important;}
+			}
+		}
+
+		ul .rellenar_puntos {
+			background-color: $color-primario!important;
+			.icon {color: white;}
+		}
+
+	/*------ form ------*/
+
+		.elegir {
+			input {
+				display: inline-block;
+				margin-top: 15px;
+			}
+			label {
+				margin-bottom: 15px;
+			}
+			.tiempo_curso {
+				position: relative;
+				.botones {
+					float: left;
+				    position: relative;
+				    left: 7%;
+				    top: 16px;
+				    font-size: 1.1em;
+				}
+				input {
+					float: left;
+    				position: relative;
+    				left: 12.5%;
+    				&::-webkit-inner-spin-button { display: none; }
+				}	
+			}
+		}
+		// .contacto { 
+		// 	label {margin-bottom: 0;}
+		// }
+		.resumen, .success {
+			background-color: $color-secundario;
+			padding: 30px 50px;
+			p {font-size: 1.2em; line-height: 1.7em}
+			p:last-child {margin-top: 1.5em; font-size: 1em;}
+			
+			label {
+				position: absolute;
+				bottom: 10px;
+				width: 100%;
+				left: 0;
+				margin-bottom: 0;
+
+				#check_terminos {
+					width: auto;
+					margin-right: 10px;
+				}
+			}
+			
+
+			#customButton {
+				opacity: .5;
+				margin: 0 auto;
+				cursor: default;
+    			padding: 9px 1.5em;
+    			bottom: 50px;
+    			font-size: 1.2em;
+    			@include box-shadow (0px, 5px, 12px, rgba(0,0,0,.2));
+			}
+		}
+		@media(max-width: 769px) {
+			.elegir {
+				input {min-width: 160px; float: right; margin: -10px 0 20px;}
+				.col-sm-6 {
+					float: none;
+					padding-top: 10px;
+					input {
+						float: none;
+						width: 85%;
+						margin: 10px 0;
+					}
+				}
+				select {margin-top: 0; margin-bottom: 15px; width: 80%;}
+
+				.tiempo_curso {
+					input { left: 0; margin-bottom: 60px;}
+					.botones {
+						float: none;
+					    position: static;
+					    div {
+					    	position: absolute;
+						    bottom: 67px;
+						    font-size: 1.5em;
+					    }
+					    .mas { right: 13%; }
+					    .menos { left: 13%; }
+					}
+				}
+			}
+
+			.personales #nacionalidad, .contacto #telf, .otros_datos #nivel {
+				margin-bottom: 50px;
+			}
+			.resumen { 
+				padding: 20px;
+				padding-bottom: 115px;
+			}
+		}
+		@media(max-width: 620px) { h3 {font-size: 2.5rem!important;} }
+
+		@media(max-width: 420px) { 
+			.elegir {
+				select { width: 90%; }
+				.col-sm-6 input { width: 95%; }
+			}
+			.resumen {
+				#customButton {
+					bottom: 60px;
+				}
+			}
+		}
+
+		.habilitado {opacity: 1!important; border: .2px solid $color-fondo-primario; cursor: pointer!important;}
+	}
+	
+	.siguiente {
+		opacity: .5;
+		cursor: default;
+		width: 20%; 
+		min-width: 120px;
+		margin: 25px auto 10px;
+		@include transition (all .5s ease);
+	}
+	
+
+	.validado {
+		background-color: rgba($color-secundario,.7)!important;
+
+	}
+	.no_validado {
+		border: 1px solid red!important;
+		color: red!important;
+	}
+	.desglose {display: none}
+}
+
+
+#contacto {
+	h1 {
+		margin: 0;
+	}
+
+	label {
+		//margin-bottom: 25px;
+		text-align: center;
+		width: 100%;
+		p {
+	    	position: relative;
+	    	opacity: 0;
+			top: 46px;
+			transition: all .5s ease;
+		}
+	}
+	input, textarea {
+		padding: 1.1rem;
+		border-radius: 2px;
+		width: 75%;
+		border: none;
+		text-align: center;
+		font-size: 1.1em;
+		border: .2px solid $color-fondo-primario;
+		background-color: rgba($color-fondo-primario,.2);
+		@media (max-width: 769px) {
+			width: 90%;
+		}
+	}
+	textarea {text-align: left; width: 75%;}
+
+	::-webkit-input-placeholder { color: $color-primario; opacity: .6; }
+	::-moz-placeholder { color: $color-primario; opacity: .6; }
+	:-ms-input-placeholder { color: $color-primario; opacity: .6; }
+	:-moz-placeholder { color: $color-primario; opacity: .6; }
+
+	.siguiente {
+		opacity: 1;
+		width: 20%; 
+		min-width: 120px;
+		margin: 25px auto 10px;
+		display: block;
+		border: .2px solid $color-fondo-primario;
+		cursor: pointer;
+	}
+	.contacto_enviado {
+		display: none;
+		text-align: center;
+	}
+}
+
+
+//CONTACTO EN EL NAVBAR
+
+#bs-example-navbar-collapse-1 .contacto {
+	position: relative;
+	left: 100px;
+	& > a {
+		width: 6.4em; 
+		border-radius: 10px; 
+		padding-top: 9px; 
+		margin-top: 13px;
+		@include transition(.1s ease-out 2s);
+	}
+	ul {
+		visibility: hidden;
+		opacity: 0;
+		margin-top: -115px;
+		position: relative;
+		top: 0;
+		border-radius: 10px;
+		padding: 15px;
+		top: 30px;
+		margin-right: -100px;
+		color: $color-primario;
+		background-color: $color-secundario;
+		span {
+			font-size: 1.5em;
+			margin-right: 10px;
+			position: relative;
+			top: 4px;
+		}
+		@include transition(.1s ease-out 2s);
+	}
+
+	&:hover {
+		& > a {
+			color: $color-primario;
+			background-color: $color-secundario;
+			@include transition(.15s ease 0s);
+		}
+		ul {
+			visibility: visible;
+			opacity: 1;
+			top: 100px;
+			@include transition(.15s ease 0s);
+		} 
+	}
+
+	@media (max-width: 1024px) {
+		left: 5%;
+		ul {
+			right: 50%;
+			top: 70px;
+		}
+	}
+	@media (max-width: 768px) {
+		left: 0;
+		ul {
+			right: 0;
+			top: 54px;
+			padding-top: 5px;
+			height: 130px;
+		}
+		&:hover ul {
+			height: 143px;
+			top: 56px;
+			margin-top: -70px!important;
+		}
+	}
+}
+
+.cookies {
+	span {
+		text-decoration: underline;
+		cursor: pointer;
+	}
+	a {
+		text-decoration: underline;
+		color: inherit;
+		font-family: inherit;
+		font-weight: inherit;
+	}
+	position: fixed;
+	width: 100%;
+	padding: 30px;
+	font-size: 1.2em;
+	text-align: center;
+	height: 80px;
+	bottom: 0;
+	background-color: $color-fondo-primario;
+	color: white;
+	z-index: 200;
+}
+
+#Faqs {
+	background-color: $color-fondo-primario;
+	.titulo {
+		color: white;
+		background-color: #404E69;
+		padding-bottom: 10px;
+		margin-bottom: 20px;
+	}
+	.panel-heading {
+		background-color: white;
+		h4 {text-shadow: none!important;}
+	}
+	h5 { color: white; text-shadow: none;}
+}
+
+
+
+
+	

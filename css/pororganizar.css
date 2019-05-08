@@ -1,0 +1,167 @@
+.cursos {
+	margin: 10px 0 40px 0;
+}
+.curso{
+	background-color: rgb(64, 78, 105);
+	color: #ffffff;
+	margin: 25px 0;
+	padding: 2px;
+	padding-bottom: 2px;
+	overfow: hidden;
+	text-align: left;
+	/* border-radius: 15px; */
+	/* height: 365px; */
+	/* box-shadow: -5px 5px 15px rgba(156, 26, 64, 0.2); */
+}
+.curso div {
+	padding: 15px 24px;
+	margin: 5px 0;
+	font-size: 16px;
+	vertical-align: middle;
+	/* text-align: center; */
+	/* background-color: rgb(232, 255, 224); */
+}
+.curso div span {
+	font-size: 15px;
+}
+
+.curso .fondo {
+	background-color: rgb(254, 254, 248);
+	color: #2c3e50;
+	border-color: white;
+	/* border-top: solid; */
+	/* border-width: 1px; */
+	margin: 2px 0px;
+}
+
+.curso .option-title {
+	/* background-color: #E8FFE0; */
+	height: 110px;
+	margin-top: 5px;
+	padding-top: 10px;
+	color:white;
+	display: block;
+}
+
+.curso .option-price {
+	/* height: 30px; */
+	margin: 0px 0;
+	padding-top: 5px;
+	font-size: 20px;
+	line-height: 35px;
+	/* text-align: right; */
+	/* padding-right: 40px; */
+	/* border-bottom-left-radius: 15px; */
+	/* border-bottom-right-radius: 15px; */
+}
+
+
+.subtitulo {
+	font-family: 'FabfeltScript-Bold';
+	font-size : 43px;
+	color: rgba(255,255,255,1);
+	color : rgb(64, 78, 105);
+	color: white;
+	text-shadow: -2px 2px 3px rgba(64, 78, 105, 0.84);
+}
+
+.checklist div {
+	display: inline-block;
+	width: 90%;
+	margin-bottom: 10px;
+}
+
+.cita {
+	background-color: #CBF2BC;
+	padding: 40px;
+	border-radius: 10px;
+	font-family: 'Cambria-Italic';
+	font-size: larger;
+}
+
+.actividad {
+	/* margin: 0 auto; */
+	/* margin: 10px; */
+	/* padding: 10px; */
+	/* width: auto; */
+	/* margin: 0; */
+	padding-bottom: 40px;
+	width: 19%;
+	float: left;
+}
+@media(max-width:480px) {
+	.actividad {
+		/* margin: 0 auto; */
+		/* margin: 10px; */
+		/* padding: 10px; */
+		/* width: auto; */
+		overflow-wrap: break-word;
+		position: relative;
+		overflow: hidden;
+		padding: 0;
+		margin: 1%;
+		padding-bottom: 40px;
+		width: 48%;
+		float: left;
+	}
+
+
+}
+
+.actividad img{
+
+}
+
+.actividad div {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 59%;
+	margin: 10px auto;
+	position: relative;
+}
+#Inscripcion {
+	    color: rgb(255, 255, 255);
+	    background-color: rgb(64, 78, 105);
+}
+
+.formulario {
+	margin: -20px 3%;
+}
+
+#Inicio {
+	position: relative;
+	top: 105px;
+	height: 600px;
+	margin-bottom: 75px;
+}
+
+
+[data-slides] {
+	background-image: url("../img/4.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	transition: background-image 0.5s linear;
+}
+
+/* Use additional CSS to control the `height` of `[data-slides]`, like so: */
+
+.test { height: 220px; }
+@media all and (min-width: 48em) {
+	.test { height: 320px; }
+}
+
+#Escuela{
+	background-color: rgb(64, 78, 105);
+	color: white;
+}
+
+.form-control { 
+	padding: 0;
+}
+
+@-ms-viewport{
+  width: device-width;
+}
+
+
+

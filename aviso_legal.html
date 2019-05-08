@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+		<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width; initial-scale = 1.0; maximum-scale=1.0; user-scalable=no" />
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>STiM - Spanish Teachers in Málaga</title>
+
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/fonts.css" rel="stylesheet" type="text/css">
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+	<link href="css/navbar.css" rel="stylesheet">
+	<link href="css/general.css" rel="stylesheet">
+</head>
+
+<body id="legales" ng-app='stimApp' ng-controller='stimController'>
+	<header>
+		<div class="col-lg-12 logo">
+			<img class="img-responsive" src="img/logo_color.svg" alt="">
+		</div>
+	</header>
+	<section class="container">
+		<div class="idiomas">
+			<div ng-repeat="idiomax in textos.idiomas " class="idioma"  ng-click="cambiaridioma($index)" ng-class="idioma != $index || 'idioma-activo'" >{{idiomax.idioma}}</div>
+		</div>
+		<div class="row">
+				<div class="col-lg-12 ">
+					<h1>{{textos.idiomas[idioma].legales.pagina_aviso.titulo}}</h1>
+				</div>
+		</div>
+
+	
+		<div ng-bind-html="textos.idiomas[idioma].legales.pagina_aviso.uno"></div>
+		<div ng-bind-html="textos.idiomas[idioma].legales.pagina_aviso.dos"></div>
+		<div ng-bind-html="textos.idiomas[idioma].legales.pagina_aviso.tres"></div>
+		<div ng-bind-html="textos.idiomas[idioma].legales.pagina_aviso.cuatro"></div>
+		<div ng-bind-html="textos.idiomas[idioma].legales.pagina_aviso.cinco"></div>
+		<div ng-bind-html="textos.idiomas[idioma].legales.pagina_aviso.seis"></div>
+		<div ng-bind-html="textos.idiomas[idioma].legales.pagina_aviso.siete"></div>
+		<div ng-bind-html="textos.idiomas[idioma].legales.pagina_aviso.ocho"></div>
+		<div ng-bind-html="textos.idiomas[idioma].legales.pagina_aviso.nueve"></div>
+		<div ng-bind-html="textos.idiomas[idioma].legales.pagina_aviso.diez"></div>
+		<div ng-bind-html="textos.idiomas[idioma].legales.pagina_aviso.once"></div>		
+		<div ng-bind-html="textos.idiomas[idioma].legales.pagina_aviso.doce"></div>
+
+	</section>
+
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.min.js"></script>
+	<script src="js/stimapp.js"></script>
+
+</body>
+
+</html>

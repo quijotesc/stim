@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- 	<meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- pinterest -->
+	<meta name="p:domain_verify" content="0a3eae554d5246e26bb609a49fa5dece"/>
+
+
+	<title>STIM - Intensive DELE Spanish Courses</title>
+
+	<!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+
+	<!-- Custom Fonts -->
+	<link href="css/fonts.css" rel="stylesheet" type="text/css">
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+	<!-- Custom CSS -->
+	<!-- <link href="css/stim.css" rel="stylesheet"> -->
+	<link href="css/general.css" rel="stylesheet">
+	<link href="css/header.css" rel="stylesheet">
+	<link href="css/navbar.css" rel="stylesheet">
+	<link href="css/section.css" rel="stylesheet">
+	<link href="css/form.css" rel="stylesheet">
+	<link href="css/footer.css" rel="stylesheet">
+	<link href="css/pororganizar.css" rel="stylesheet">
+	<link href="css/carrito.css" rel="stylesheet">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0-alpha/css/bootstrap-datepicker.css">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+
+
+</head>
+
+<body id="page-top" class="index" ng-app='stimApp' ng-controller='stimController'>
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header page-scroll">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<!--<a class="navbar-brand" href="#page-top">Start Bootstrap</a>   -->
+			</div>
+
+			<div class="idiomas">
+				<div ng-repeat="idiomax in textos.idiomas " class="idioma"  ng-click="cambiaridioma($index)" ng-class="idioma != $index || 'idioma-activo'" >{{idiomax.idioma}}</div>
+				<a class="idioma" href="/index.html">home</a>
+				
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+
+	<!-- Cursos -->
+	<section id="{{textos.idiomas[idioma].cursos.id}}">
+		<div class="container">
+			<br/><br/>
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h1 ng-bind-html="textos.idiomas[idioma].cursos.cursos[4].titulo"></h1>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-lg-12" ng-bind-html="textos.idiomas[idioma].cursos.cursos[4].descripcion"></div>
+			</div>
+
+			<div class="row cursos prices">
+				<div class="col-sm-6 col-lg-4">
+					<div class="curso">
+						<div class="option-title">
+							<h3 ng-bind-html="textos.idiomas[idioma].cursos.cursos[4].titulo"></h3>
+						</div>
+						
+						<div class="fondo personas" ng-bind-html="textos.idiomas[idioma].cursos.cursos[4].personas"></div>
+						<!-- <div class="duracion">{{textos.idiomas[idioma].cursos.cursos[4].duracion}}</div> -->
+						<div class="fondo horas" ng-bind-html="textos.idiomas[idioma].cursos.cursos[4].horas"></div>
+						<div class="fondo horasdia" ng-bind-html="textos.idiomas[idioma].cursos.cursos[4].horasdia"></div>
+						<div class="fondo option-price price" ng-bind-html="textos.idiomas[idioma].cursos.cursos[4].precio">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2 ng-bind-html="textos.idiomas[idioma].cursos.subtitulos[0]"></h2>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-lg-12 text-center checklist">
+					<ul>
+						<li ng-repeat="inclu in textos.idiomas[idioma].cursos.incluido"> <i class="fa-li fa fa-check"></i><div ng-bind-html="inclu"></div></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2 ng-bind-html="textos.idiomas[idioma].cursos.subtitulos[1]"></h2>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="" ng-bind-html="textos.idiomas[idioma].cursos.parrafos[0]"></div>
+				</div>
+			</div>	
+			<div class="row">
+				<div class="actividades text-center" ng-repeat="acti in textos.idiomas[idioma].cursos.actividades">
+					<div class="actividad">
+						<img style="width:60%; margin: 0 auto; "src="img/actividad{{$index+1}}.svg">
+						<div ng-bind-html="acti"></div> 
+					</div>
+				</div>	
+			</div>
+
+
+			<div class="row">
+				<div class="col-lg-12 text-center cita">
+					<div class="" > "{{textos.idiomas[idioma].cursos.citas[0]}}"	</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<!-- Faqs -->
+	<section id="{{textos.idiomas[idioma].faqs.id}}">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 titulo">
+					<h1>{{textos.idiomas[idioma].faqs.titulo}}</h1>
+				</div>
+			</div>
+			<hr>
+		
+	     <div class="panel-group" id="accordion">
+		     	<div ng-repeat="faqsection in textos.idiomas[idioma].faqs.faqs">
+		     		<div class="faqHeader"><h5>{{faqsection.titulo}} :<h5></div>
+
+			        <div class="panel panel-default" ng-repeat="pregunta in faqsection.faqs">
+			            <div class="panel-heading">
+			                <h4 class="panel-title">
+			                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse{{$parent.$index}}{{$index}}">{{pregunta.p}}</a>
+			                </h4>
+			            </div>
+			            <div id="collapse{{$parent.$index}}{{$index}}" class="panel-collapse collapse">
+			                <div class="panel-body" ng-bind-html="pregunta.r"></div>
+			                <div class="panel-body" ng-if="pregunta.l">
+			                	<ul>
+			                		<li ng-repeat="lista in pregunta.l" ng-bind-html="lista"></li>
+			                	</ul>
+			                </div>
+			                <div class="panel-body" ng-if="pregunta.r2" ng-bind-html="pregunta.r2"></div>
+			                <div class="panel-body" ng-if="pregunta.l2">
+			                	<ul>
+			                		<li ng-repeat="lista in pregunta.l2" ng-bind-html="lista"></li>
+			                	</ul>
+			                </div>
+			                <div class="panel-body" ng-if="pregunta.r3" ng-bind-html="pregunta.r3"></div>
+			                <div class="panel-body" ng-if="pregunta.r4" ng-bind-html="pregunta.r4"></div>
+			                <div class="panel-body" ng-if="pregunta.r5" ng-bind-html="pregunta.r5"></div>
+			                <div class="panel-body" ng-if="pregunta.r6" ng-bind-html="pregunta.r6"></div>
+			            </div>
+			        </div>
+		     	</div>
+				<div class="row" ng-repeat="parrafo in textos.idiomas[idioma].faqs.parrafos">
+				<div class="alert alert-warning alert-dismissible" role="alert" ng-bind-html="parrafo"></div>
+			</div>
+	</section>
+	<div class="cookies">
+		<p>¿<span id="cerrar">Aceptas</span> las cookies o <a href="cookies.html" target="_blank">qué?</a></p>
+	</div>
+
+	<!-- Footer -->
+	<footer class="text-center">
+		<div class="footer-above">
+			<div class="container">
+				<div class="row">
+				<hr>
+					<div class="footer-col col-md-12">
+						<ul class="list-inline">
+							<li ng-repeat="red in textos.idiomas[idioma].redes">
+								<a href="{{red.link}}" class="btn-social btn-outline"><i class="fa fa-fw fa-{{red.tipo}}"></i></a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-12 legales">
+						<ul>
+							<li ng-repeat="link in textos.idiomas[idioma].legales.footer">
+								<a href="{{link.url}}" target="_blank">{{link.enlace}}</a>  |  
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+	<!-- Angularjs -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.min.js"></script>
+
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- Plugin JavaScript -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<script src="js/classie.js"></script>
+	<script src="js/cbpAnimatedHeader.js"></script>
+
+	<!-- Contact Form JavaScript -->
+	<script src="js/jqBootstrapValidation.js"></script>
+
+	<!-- Custom Theme JavaScript -->
+	<script src="js/freelancer.js"></script>
+
+	<script src="js/stimapp.js"></script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0-alpha/js/bootstrap-datepicker.js"></script>
+
+
+	<script src="js/cookies.js"></script>
+	<script src="js/inscripcion.js"></script>
+	<!-- <script src="js/mails.js"></script> -->
+	<script src="js/validacion.js"></script>
+	
+	<script src="js/calculadora.js"></script>
+
+	
+
+
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-70395724-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+	
+
+
+
+</body>
+
+</html>

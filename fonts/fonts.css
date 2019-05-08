@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'FabfeltScript-Bold';
+  src: url('../fonts/FabfeltScript-Bold.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FabfeltScript-Bold';
+  src:  url('../fonts/FabfeltScript-Bold.otf')  format('opentype'), 
+  		url('../fonts/FabfeltScript-Bold.ttf')  format('truetype'),
+  		url('../fonts/FabfeltScript-Bold.svg#FabfeltScript-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CambriaMath';
+  src: url('../fonts/CambriaMath.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CambriaMath';
+  src:  url('../fonts/CambriaMath.ttf')  format('truetype'), url('../fonts/CambriaMath.svg#CambriaMath') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cambria-Italic';
+  src: url('../fonts/Cambria-Italic.eot?#iefix') format('embedded-opentype'),  url('../fonts/Cambria-Italic.woff') format('woff'), url('Cambria-Italic.ttf')  format('truetype'), url('../fonts/Cambria-Italic.svg#Cambria-Italic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+
+
+@font-face {
+    font-family: 'stim-webfont';
+    src:    url('../fonts/stim-webfont.eot?4a1pkk');
+    src:    url('../fonts/stim-webfont.eot?4a1pkk#iefix') format('embedded-opentype'),
+        url('../fonts/stim-webfont.ttf?4a1pkk') format('truetype'),
+        url('../fonts/stim-webfont.woff?4a1pkk') format('woff'),
+        url('../fonts/stim-webfont.svg?4a1pkk#stim-webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'stim-webfont' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'stim-webfont' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-carrito_resumen:before {
+    content: "\e903";
+}
+.icon-carrito_paso4:before {
+    content: "\e904";
+}
+.icon-carrito_paso3:before {
+    content: "\e905";
+}
+.icon-carrito_paso2:before {
+    content: "\e906";
+}
+.icon-carrito_paso1:before {
+    content: "\e907";
+}
+.icon-carrito_email2:before {
+    content: "\e902";
+}
+.icon-carrito_email:before {
+    content: "\e901";
+}
+.icon-carrito_telf:before {
+    content: "\e908";
+}
+.icon-carrito_casa:before {
+    content: "\e900";
+}
+
+
+
+

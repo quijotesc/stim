@@ -1,0 +1,93 @@
+.navbar {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	font-family: 'CambriaMath';
+	font-size : 15px;
+	color : #CBF2BC;
+	color : rgb(203, 242, 188);
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+	color: #CBF2BC;
+	background-color: transparent !important;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus
+.navbar a:focus {
+	color: #CBF2BC;
+	outline: 0;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus  {
+	color: #CBF2BC;
+}
+
+.navbar .navbar-nav {
+	letter-spacing: 1px;
+	margin: 0 auto;
+	float: none !important;
+	display: inline-block;
+}
+
+.navbar .navbar-nav li a:focus {
+	outline: 0;
+}
+
+.navbar-default,
+.navbar-inverse {
+	border: 0;
+}
+
+.navbar-default{
+	background-color: #404E69;
+}
+.dropdown-menu li{
+	margin: 20px;
+	/* width: 100%; */
+	position: relative;
+}
+#map-canvas {
+  width: 100%;
+  height: 300px;
+  margin: 50px 0;
+  /* border: 2px solid #fff; */
+}
+
+.idiomas {
+	position: absolute;
+	left: 10px;
+	display: block;
+	top: 10px;
+}
+
+.idioma {
+	display: inline-block;
+	color: white;
+	margin: 0 10px;
+	cursor: pointer;
+}
+
+.idioma-activo{
+	color: #CBF2BC;
+}
+@media(min-width:768px) {
+	.navbar-fixed-top {
+		padding: 20px 0;
+		-webkit-transition: padding .3s;
+		-moz-transition: padding .3s;
+		transition: padding .3s;
+	}
+
+	.navbar-fixed-top .navbar-brand {
+		font-size: 2em;
+		-webkit-transition: all .3s;
+		-moz-transition: all .3s;
+		transition: all .3s;
+	}
+
+	.navbar-fixed-top.navbar-shrink {
+		padding: 0;
+	}
+
+	.navbar-fixed-top.navbar-shrink .navbar-brand {
+		font-size: 1.5em;
+	}
+}
